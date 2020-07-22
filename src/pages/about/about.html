@@ -3,11 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>NewsAnalyzer</title>
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
 <body>
-  <a href="./analytics.html">Analytics</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__container">
+      <img class="logo header__logo" src="" alt="Логотип">
+      <nav class="header__nav">
+        <ul class="header__nav">
+          <li class="header__item">
+            <a href="./index.html" class="header__link">Главная</a>
+          </li>
+          <li class="header__item">
+            <a href="./about.html" class="header__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Клиентам -->
+    <section class="clients container">
+      <h1 class="clients__title section-title">Клиентам</h1>
+      <div class="clients__text">
+        <p class="clients__paragraph">
+          Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.
+        </p>
+        <p class="clients__paragraph">
+          Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.
+        </p>
+        <p class="clients__paragraph">
+          Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.
+        </p>
+        <p class="clients__paragraph">
+          При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.
+        </p>
+        <p class="clients__paragraph">
+          Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.
+        </p>
+      </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="tech">
+      <div class="container tech__container">
+        <h2 class="tech__title section-title">
+          Используемые технологии
+        </h2>
+
+        <ul class="tech__list">
+          <li class="tech__item">
+            <span class="tech__name">HTML</span>
+            <img src="" alt="" class="tech__image">
+          </li>
+
+          <li class="tech__item">
+            <span class="tech__name">CSS</span>
+            <img src="" alt="" class="tech__image">
+          </li>
+
+          <li class="tech__item">
+            <span class="tech__name">JavaScript</span>
+            <img src="" alt="" class="tech__image">
+          </li>
+
+          <li class="tech__item">
+            <span class="tech__name">Webpack</span>
+            <img src="" alt="" class="tech__image">
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About author -->
+    <section class="author">
+      <div class="author__image-container">
+        <img class="author__image" src="" alt="">
+      </div>
+      <div class="author__content">
+        <h2 class="author__title section-title">Об авторе</h2>
+        <div class="author__text">
+          <p class="author__paragraph">
+            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+          </p>
+          <p class="author__paragraph">
+            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <span class="footer__copyright">&copy; Tina Dumilina</span>
+
+    <ul class="footer__nav">
+      <li class="footer__item">
+        <a href="./index.html" class="footer__link">Главная</a>
+      </li>
+      <li class="footer__item">
+        <a href="./about.html" class="footer__link">О проекте</a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">Яндекс.Практикум</a>
+      </li>
+    </ul>
+
+    <ul class="footer__socials socials">
+      <li class="socials__item">
+        <a href="" class="social__link social__link_github"></a>
+      </li>
+      <li class="socials__item">
+        <a href="" class="social__link social__link_facebook"></a>
+      </li>
+    </ul>
+  </footer>
+
   <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>
 </html>

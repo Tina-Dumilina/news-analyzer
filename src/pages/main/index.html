@@ -3,11 +3,225 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>NewsAnalyzer</title>
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
 </head>
 <body>
-  <a href="./about.html">About</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__container">
+      <img class="logo header__logo" src="" alt="Логотип">
+      <nav class="header__nav">
+        <ul class="header__nav">
+          <li class="header__item">
+            <a href="./index.html" class="header__link">Главная</a>
+          </li>
+          <li class="header__item">
+            <a href="./about.html" class="header__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Intro section -->
+    <section class="intro">
+      <div class="intro__container">
+        <h1 class="intro__title">
+          Что в мире творится?
+        </h1>
+        <p class="intro__subtitle">
+          Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
+        </p>
+
+        <div class="intro__search">
+          <input class="intro__input" type="search" name="" id="">
+          <button class="intro__button button" type="button"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="results container">
+      <!-- Список результатов -->
+      <div class="results__title-container">
+        <h2 class="results__title section-title">Результаты поиска</h2>
+        <a href="" class="results__link">Посмотреть аналитику</a>
+      </div>
+      
+      <ul class="results__list">
+        <li class="results__item">
+          <article class="results__article article">
+            <img src="" alt="" class="article__image">
+            <blockquote class="article__content">
+              <time class="article__time">2 августа, 2019</time>
+              <h3 class="article__heading">
+                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+              </h3>
+              <p class="article__lead">
+                Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+              </p>
+              <cite class="article__source">
+                Медиазона
+              </cite>
+            </blockquote>
+          </article>
+        </li>
+
+        <li class="results__item">
+          <article class="results__article article">
+            <img src="" alt="" class="article__image">
+            <blockquote class="article__content">
+              <time class="article__time">2 августа, 2019</time>
+              <h3 class="article__heading">
+                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+              </h3>
+              <p class="article__lead">
+                Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+              </p>
+              <cite class="article__source">
+                Медиазона
+              </cite>
+            </blockquote>
+          </article>
+        </li>
+
+        <li class="results__item">
+          <article class="results__article article">
+            <img src="" alt="" class="article__image">
+            <blockquote class="article__content">
+              <time class="article__time">2 августа, 2019</time>
+              <h3 class="article__heading">
+                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+              </h3>
+              <p class="article__lead">
+                Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+              </p>
+              <cite class="article__source">
+                Медиазона
+              </cite>
+            </blockquote>
+          </article>
+        </li>
+
+        <li class="results__item">
+          <article class="results__article article">
+            <img src="" alt="" class="article__image">
+            <blockquote class="article__content">
+              <time class="article__time">2 августа, 2019</time>
+              <h3 class="article__heading">
+                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+              </h3>
+              <p class="article__lead">
+                Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+              </p>
+              <cite class="article__source">
+                Медиазона
+              </cite>
+            </blockquote>
+          </article>
+        </li>
+
+        <li class="results__item">
+          <article class="results__article article">
+            <img src="" alt="" class="article__image">
+            <blockquote class="article__content">
+              <time class="article__time">2 августа, 2019</time>
+              <h3 class="article__heading">
+                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+              </h3>
+              <p class="article__lead">
+                Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+              </p>
+              <cite class="article__source">
+                Медиазона
+              </cite>
+            </blockquote>
+          </article>
+        </li>
+
+        <li class="results__item">
+          <article class="results__article article">
+            <img src="" alt="" class="article__image">
+            <blockquote class="article__content">
+              <time class="article__time">2 августа, 2019</time>
+              <h3 class="article__heading">
+                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+              </h3>
+              <p class="article__lead">
+                Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+              </p>
+              <cite class="article__source">
+                Медиазона
+              </cite>
+            </blockquote>
+          </article>
+        </li>
+      </ul>
+
+      <!-- Кнопка "Показать еще" -->
+      <button type="button" class="button results__button">Показать еще</button>
+
+      <!-- Preloader -->
+
+      <!-- Ничего не найдено -->
+      <div class="results__not-found not-found">
+        <span class="not-found__image"></span>
+        <h2 class="not-found__heading">
+          Ничего не найдено
+        </h2>
+        <p class="not-found__paragraph">
+          К сожалению по вашему запросу ничего не найдено.
+        </p>
+      </div>
+    </section>
+
+    <!-- About author -->
+    <section class="author">
+      <div class="author__image-container">
+        <img class="author__image" src="" alt="">
+      </div>
+      <div class="author__content">
+        <h2 class="author__title section-title">Об авторе</h2>
+        <div class="author__text">
+          <p class="author__paragraph">
+            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+          </p>
+          <p class="author__paragraph">
+            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <span class="footer__copyright">&copy; Tina Dumilina</span>
+
+    <ul class="footer__nav">
+      <li class="footer__item">
+        <a href="./index.html" class="footer__link">Главная</a>
+      </li>
+      <li class="footer__item">
+        <a href="./about.html" class="footer__link">О проекте</a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">Яндекс.Практикум</a>
+      </li>
+    </ul>
+
+    <ul class="footer__socials socials">
+      <li class="socials__item">
+        <a href="" class="social__link social__link_github"></a>
+      </li>
+      <li class="socials__item">
+        <a href="" class="social__link social__link_facebook"></a>
+      </li>
+    </ul>
+  </footer>
+
   <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 </body>
 </html>

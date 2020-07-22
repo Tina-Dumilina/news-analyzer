@@ -3,11 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>NewsAnalyzer</title>
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.analytics.css %>">
 </head>
 <body>
-  <a href="./index.html">Main</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__container">
+      <img class="logo header__logo" src="" alt="Логотип">
+      <nav class="header__nav">
+        <ul class="header__nav">
+          <li class="header__item">
+            <a href="./index.html" class="header__link">Главная</a>
+          </li>
+          <li class="header__item">
+            <a href="./about.html" class="header__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary container">
+      <nav class="summary__breadcrumb breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <a class="breadcrumb__link" href="#">Главная</a>
+          </li>
+          <li class="breadcrumb__item">
+            <a class="breadcrumb__link" href="#" aria-current="location">Аналитика</a>
+          </li>
+        </ol>
+      </nav>
+
+      <h1 class="summary__title section-title">
+        Вы спросили: «Путешествия»
+      </h1>
+      <ul class="summary__results">
+        <li class="summary__item">
+          Новостей за неделю: 
+          <span class="summary__text-accent">34 324</span>
+        </li>
+        <li class="summary__item">
+          Упоминаний в загаловках: 
+          <span class="summary__text-accent">235</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="chart container">
+      <h2 class="chart__title">Аналитика по дням</h2>
+      <div class="chart__container">
+
+        <div class="chart__row">
+          <p class="chart__date">
+            Дата
+            <span class="chart__month">
+              (август)
+            </span>
+          </p>
+          <p class="chart__amount">
+            Кол-во упоминаний
+          </p>
+        </div>
+
+        <ul class="chart__list">
+          <li class="chart__item">
+            <span class="chart__day">19, пн</span>
+            <div class="chart__bar"></div>
+          </li>
+          <li class="chart__day">
+            <span class="chart__day">19, пн</span>
+            <div class="chart__bar"></div>
+          </li>
+          <li class="chart__day">
+            <span class="chart__day">19, пн</span>
+            <div class="chart__bar"></div>
+          </li>
+          <li class="chart__day">
+            <span class="chart__day">19, пн</span>
+            <div class="chart__bar"></div>
+          </li>
+          <li class="chart__day">
+            <span class="chart__day">19, пн</span>
+            <div class="chart__bar"></div>
+          </li>
+          <li class="chart__day">
+            <span class="chart__day">19, пн</span>
+            <div class="chart__bar"></div>
+          </li>
+          <li class="chart__day">
+            <span class="chart__day">19, пн</span>
+            <div class="chart__bar"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <span class="footer__copyright">&copy; Tina Dumilina</span>
+
+    <ul class="footer__nav">
+      <li class="footer__item">
+        <a href="./index.html" class="footer__link">Главная</a>
+      </li>
+      <li class="footer__item">
+        <a href="./about.html" class="footer__link">О проекте</a>
+      </li>
+      <li class="footer__item">
+        <a href="#" class="footer__link">Яндекс.Практикум</a>
+      </li>
+    </ul>
+
+    <ul class="footer__socials socials">
+      <li class="socials__item">
+        <a href="" class="social__link social__link_github"></a>
+      </li>
+      <li class="socials__item">
+        <a href="" class="social__link social__link_facebook"></a>
+      </li>
+    </ul>
+  </footer>
+
   <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
 </body>
 </html>

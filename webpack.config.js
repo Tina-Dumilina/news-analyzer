@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -19,41 +20,39 @@ module.exports = {
   },
   resolve: {
     alias: {
-      images: path.resolve(__dirname, 'src/images')
+      images: path.resolve(__dirname, 'src/images'),
     }
   },
   module: {
-    rules: [
-      { 
-        test: /\.js$/, 
+    rules: [{
+        test: /\.js$/,
         use: {
           loader: "babel-loader"
-        }, 
-        exclude: /node_modules/ 
+        },
+        exclude: /node_modules/
       },
       {
         test: /\.css$/i,
         use: [
           (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
           {
-            loader:'css-loader',
+            loader: 'css-loader',
             options: {
               importLoaders: 2
-            } 
+            }
           },
           'postcss-loader'
         ],
       },
       {
         test: /\.(png|jpe?g|gif|ico|svg)$/i,
-        use: [
-          {
+        use: [{
             loader: 'file-loader',
             options: {
               name: 'images/[name].[ext]',
               esModule: false
             }
-          }, 
+          },
           {
             loader: 'image-webpack-loader',
             options: {
@@ -78,14 +77,12 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'vendor/[name].[ext]'
-            }
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: 'vendor/[name].[ext]'
           }
-        ]
+        }]
       }
     ],
   },
@@ -122,29 +119,39 @@ module.exports = {
       chunks: ['analytics'],
       filename: 'analytics.html'
     }),
-    // new HtmlWebpackPlugin([
-    //   {
-    //     template: './src/pages/main/index.html',
-    //     inject: false,
-    //     hash: true,
-    //     chunks: ['index'],
-    //     filename: 'index.html'
-    //   },
-    //   {
-    //     template: './src/pages/about/about.html',
-    //     inject: false,
-    //     hash: true,
-    //     chunks: ['about'],
-    //     filename: 'about.html'
-    //   },
-    //   {
-    //     template: './src/pages/analytics/analytics.html',
-    //     inject: false,
-    //     hash: true,
-    //     chunks: ['analytics'],
-    //     filename: 'analytics.html'
-    //   }
-    // ]),
+    new WebpackPwaManifest({
+      name: 'NewsAnalyzer – сервис анализа новостей',
+      short_name: 'NewsAnalyzer',
+      icons: [{
+          src: path.resolve(__dirname, 'src/images/favicon/android-chrome-192x192.png'),
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: path.resolve(__dirname, 'src/images/favicon/android-chrome-512x512.png'),
+          sizes: '512x512',
+          type: 'image/png'
+        },
+        {
+          src: path.resolve(__dirname, 'src/images/favicon/apple-touch-icon.png'),
+          sizes: '180x180',
+          type: 'image/png'
+        },
+        {
+          src: path.resolve(__dirname, 'src/images/favicon/favicon-16x16.png'),
+          sizes: '16x16',
+          type: 'image/png'
+        },
+        {
+          src: path.resolve(__dirname, 'src/images/favicon/favicon-32x32.png'),
+          sizes: '32x32',
+          type: 'image/png'
+        }
+      ],
+      theme_color: '#fff',
+      background_color: '#fff',
+      display: 'standalone'
+    }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)

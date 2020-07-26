@@ -1,0 +1,8 @@
+@import './__paragraph/clients__paragraph.css';
+@import './__title/clients__title.css';
+@import './__text/clients__text.css';
+
+.clients {
+  padding-top: 80px;
+  padding-bottom: 94px;
+}

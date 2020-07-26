@@ -1,0 +1,22 @@
+@import './__container/header__container.css';
+@import './__list/header__list.css';
+@import './__item/header__item.css';
+@import './__link/header__link.css';
+@import './__link/_active/header__link_active.css';
+
+.header {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header_theme_light {
+  box-shadow: inset 0px -1px 0px #D1D2D6;
+}
+
+.header_theme_dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}

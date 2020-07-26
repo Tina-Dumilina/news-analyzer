@@ -1,0 +1,22 @@
+.button {
+  width: 100%;
+  min-height: 64px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color .3s ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  transition: background-color .3s ease-in-out;
+}

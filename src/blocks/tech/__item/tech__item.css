@@ -1,0 +1,13 @@
+.tech__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
+  line-height: 1.33;
+  letter-spacing: 0.2px;
+}
+
+.tech__item:last-of-type {
+  margin-right: 0;
+} 

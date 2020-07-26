@@ -1,0 +1,16 @@
+.header__link {
+  display: block;
+  color: #b6bcbf;
+  font-weight: 500;
+  line-height: 77px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.header_theme_dark .header__link:hover {
+  color: #fff;
+} 
+
+.header_theme_light .header__link:hover {
+  color: #1a1b22;
+}

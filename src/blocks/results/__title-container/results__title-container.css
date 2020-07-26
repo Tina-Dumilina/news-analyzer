@@ -1,0 +1,6 @@
+.results__title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}

@@ -1,0 +1,16 @@
+.breadcrumb__item {
+  position: relative;
+  margin-right: 10px;
+}
+
+.breadcrumb__item::after {
+  content: '/';
+}
+
+.breadcrumb__item:last-of-type {
+  margin-right: 0;
+} 
+
+.breadcrumb__item:last-of-type::after {
+  display: none;
+} 

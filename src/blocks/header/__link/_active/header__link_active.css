@@ -1,0 +1,13 @@
+.header__link_active {
+  cursor: default;
+}
+
+.header_theme_dark .header__link_active {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.header_theme_light .header__link_active {
+  color: #1a1b22;
+  border-bottom: 3px solid #1a1b22;
+}

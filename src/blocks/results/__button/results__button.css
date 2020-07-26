@@ -1,0 +1,14 @@
+.results__button {
+  display: block;
+  margin: 64px auto 0;
+  max-width: 288px;
+  
+  color: #1a1b22;
+  background-color: #fff;
+  border-radius: 80px;
+}
+
+.results__button:hover,
+.results__button:focus {
+  background-color: #e8e9ea;
+}

@@ -1,0 +1,7 @@
+.article__time {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: normal;
+  line-height: 1.33;
+  color: #b6bcbf;
+}

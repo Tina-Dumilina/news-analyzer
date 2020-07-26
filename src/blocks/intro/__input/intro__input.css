@@ -1,0 +1,33 @@
+.intro__input {
+  right: 0;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 180px;
+  min-height: 64px;
+  border: 1px solid #D1D2D6;
+  box-sizing: border-box;
+  border-radius: 100px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.37;
+  outline: none;
+  caret-color: #2f71e5;
+}
+
+.intro__input::placeholder {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.37;
+  color: #b6bcbf;
+}
+
+.intro__input::-webkit-search-decoration, 
+.intro__input::-webkit-search-cancel-button, 
+.intro__input::-webkit-search-results-button, 
+.intro__input::-webkit-search-results-decoration {
+  display: none;
+}

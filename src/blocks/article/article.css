@@ -1,0 +1,14 @@
+@import './__image/article__image.css';
+@import './__content/article__content.css';
+@import './__time/article__time.css';
+@import './__heading/article__heading.css';
+@import './__lead/article__lead.css';
+@import './__source/article__source.css';
+
+.article {
+  position: relative;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}

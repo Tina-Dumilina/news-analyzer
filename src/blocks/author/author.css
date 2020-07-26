@@ -1,0 +1,10 @@
+@import './__image-container/author__image-container.css';
+@import './__image/author__image.css';
+@import './__content/author__content.css';
+@import './__title/author__title.css';
+@import './__paragraph/author__paragraph.css';
+
+.author {
+  display: flex;
+  align-items: center;
+}

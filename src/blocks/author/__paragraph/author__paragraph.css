@@ -1,0 +1,9 @@
+.author__paragraph {
+  margin: 0;
+  margin-bottom: 30px;
+  line-height: 1.33;
+}
+
+.author__paragraph:last-of-type {
+  margin-bottom: 0;
+}

@@ -1,0 +1,9 @@
+@import './__item/breadcrumb__item.css';
+@import './__list/breadcrumb__list.css';
+@import './__link/breadcrumb__link.css';
+@import './__link/_active/breadcrumb__link_active.css';
+
+.breadcrumb {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

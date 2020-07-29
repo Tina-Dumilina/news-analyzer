@@ -1,0 +1,9 @@
+@import './__link/github__link.css';
+@import './__title-container/github__title-container.css';
+@import './__wrapper/github__wrapper.css';
+
+.github {
+  padding-top: 72px;
+  padding-bottom: 80px;
+  background-color: #f5f6f7;
+}

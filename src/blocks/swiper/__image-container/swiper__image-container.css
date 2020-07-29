@@ -1,0 +1,6 @@
+.swiper__image-container {
+  max-width: 64px;
+  max-height: 64px;
+  margin-right: 16px;
+  border-radius: 50%;
+}

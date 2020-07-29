@@ -1,0 +1,30 @@
+@import './__author/swiper__author.css';
+@import './__avatar/swiper__avatar.css';
+@import './__code/swiper__code.css';
+@import './__email/swiper__email.css';
+@import './__image-container/swiper__image-container.css';
+@import './__image/swiper__image.css';
+@import './__link/swiper__link.css';
+@import './__slide/swiper__slide.css';
+@import './__slide/_active/swiper__slide_active.css';
+@import './__slide/_prev/swiper__slide_prev.css';
+@import './__slide/_next/swiper__slide_next.css';
+@import './__text/swiper__text.css';
+@import './__time/swiper__time.css';
+@import './__wrapper/swiper__wrapper.css';
+@import './__bullet/swiper__bullet.css';
+@import './__bullet/_active/swiper__bullet_active.css';
+@import './__button/swiper__button.css';
+@import './__button/_prev/swiper__button_prev.css';
+@import './__pagination/swiper__pagination.css';
+
+.swiper {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 48px 0;
+  max-width: 1232px;
+  overflow: initial;
+}
+

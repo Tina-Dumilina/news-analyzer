@@ -1,0 +1,22 @@
+.swiper__slide {
+  position: relative;
+  flex-shrink: 0;
+  max-width: 400px;
+  width: 100%;
+  min-height: 288px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.swiper__slide::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to left,rgba(245,246,247,0) 10%,#f5f6f7 30%);
+}

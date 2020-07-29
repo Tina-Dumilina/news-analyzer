@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NewsAnalyzer. Что творится в мире?</title>
   <meta name="author" content="Tina Dumilina">
-  <meta name="description" content="Это сервис для анализа происходящих в мире событий. Его задача – установить, насколько популярны новости на определенную тему.">
+  <meta name="description"
+    content="Это сервис для анализа происходящих в мире событий. Его задача – установить, насколько популярны новости на определенную тему.">
   <link rel="shortcut icon" href="<%= require('images/favicon/favicon.ico') %>" type="image/x-icon">
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
+
 <body class="root">
   <!-- Header -->
   <header class="header header_theme_light">
@@ -35,19 +38,27 @@
       <h1 class="clients__title section-title">Клиентам</h1>
       <div class="clients__text">
         <p class="clients__paragraph">
-          Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.
+          Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими
+          технологиями владеет.
         </p>
         <p class="clients__paragraph">
-          Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.
+          Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять
+          новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также
+          сайт проще и дешевле поддерживать.
         </p>
         <p class="clients__paragraph">
-          Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.
+          Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от
+          сервера приходит ответ. Это повышает удобство использования сервиса.
         </p>
         <p class="clients__paragraph">
-          При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.
+          При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов.
+          Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если
+          посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит,
+          потенциальная аудитория возрастает.
         </p>
         <p class="clients__paragraph">
-          Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.
+          Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к
+          этому студенту.
         </p>
       </div>
     </section>
@@ -91,11 +102,144 @@
       <div class="author__content">
         <h2 class="author__title section-title">Об авторе</h2>
         <p class="author__paragraph">
-          Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+          Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими
+          технологиями разработки владеете.
         </p>
         <p class="author__paragraph">
-          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+          потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами
+          связаться.
         </p>
+      </div>
+    </section>
+
+    <!-- Github -->
+    <section class="github">
+      <div class="github__title-container container">
+        <h2 class="github__title section-title">История коммитов из GitHub</h2>
+        <a href="" class="github__link link">Открыть в Github</a>
+      </div>
+
+      <div class="github__wrapper">
+        <div class="github__swiper swiper">
+          <ul class="swiper__wrapper">
+            <li class="swiper__slide">
+              <a href="" class="swiper__link">
+                <article class="swiper__article">
+                  <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
+                  <div class="swiper__avatar">
+                    <div class="swiper__image-container">
+                      <img src="<%= require('images/slider-image.jpg') %>" alt="" class="swiper__image">
+                    </div>
+                    <div class="swiper__title-container">
+                      <h3 class="swiper__author">Мария Фёдорова</h3>
+                      <p class="swiper__email">mariiifed@yandex.ru</p>
+                    </div>
+                  </div>
+                  <p class="swiper__text">
+                    You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open
+                    <code class="swiper__code">Tools > Plugins > Available plugins</code>
+                    and find and install Emmet plugin.
+                  </p>
+                </article>
+              </a>
+            </li>
+
+            <li class="swiper__slide">
+              <a href="" class="swiper__link">
+                <article class="swiper__article">
+                  <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
+                  <div class="swiper__avatar">
+                    <div class="swiper__image-container">
+                      <img src="<%= require('images/slider-image.jpg') %>" alt="" class="swiper__image">
+                    </div>
+                    <div class="swiper__title-container">
+                      <h3 class="swiper__author">Мария Фёдорова</h3>
+                      <p class="swiper__email">mariiifed@yandex.ru</p>
+                    </div>
+                  </div>
+                  <p class="swiper__text">
+                    You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open
+                    <code class="swiper__code">Tools > Plugins > Available plugins</code>
+                    and find and install Emmet plugin.
+                  </p>
+                </article>
+              </a>
+            </li>
+
+            <li class="swiper__slide">
+              <a href="" class="swiper__link">
+                <article class="swiper__article">
+                  <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
+                  <div class="swiper__avatar">
+                    <div class="swiper__image-container">
+                      <img src="<%= require('images/slider-image.jpg') %>" alt="" class="swiper__image">
+                    </div>
+                    <div class="swiper__title-container">
+                      <h3 class="swiper__author">Мария Фёдорова</h3>
+                      <p class="swiper__email">mariiifed@yandex.ru</p>
+                    </div>
+                  </div>
+                  <p class="swiper__text">
+                    You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open
+                    <code class="swiper__code">Tools > Plugins > Available plugins</code>
+                    and find and install Emmet plugin.
+                  </p>
+                </article>
+              </a>
+            </li>
+
+            <li class="swiper__slide">
+              <a href="" class="swiper__link">
+                <article class="swiper__article">
+                  <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
+                  <div class="swiper__avatar">
+                    <div class="swiper__image-container">
+                      <img src="<%= require('images/slider-image.jpg') %>" alt="" class="swiper__image">
+                    </div>
+                    <div class="swiper__title-container">
+                      <h3 class="swiper__author">Мария Фёдорова</h3>
+                      <p class="swiper__email">mariiifed@yandex.ru</p>
+                    </div>
+                  </div>
+                  <p class="swiper__text">
+                    You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open
+                    <code class="swiper__code">Tools > Plugins > Available plugins</code>
+                    and find and install Emmet plugin.
+                  </p>
+                </article>
+              </a>
+            </li>
+
+            <li class="swiper__slide">
+              <a href="" class="swiper__link">
+                <article class="swiper__article">
+                  <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
+                  <div class="swiper__avatar">
+                    <div class="swiper__image-container">
+                      <img src="<%= require('images/slider-image.jpg') %>" alt="" class="swiper__image">
+                    </div>
+                    <div class="swiper__title-container">
+                      <h3 class="swiper__author">Мария Фёдорова</h3>
+                      <p class="swiper__email">mariiifed@yandex.ru</p>
+                    </div>
+                  </div>
+                  <p class="swiper__text">
+                    You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open
+                    <code class="swiper__code">Tools > Plugins > Available plugins</code>
+                    and find and install Emmet plugin.
+                  </p>
+                </article>
+              </a>
+            </li>
+
+          </ul>
+          
+          <div class="swiper__pagination"></div>
+        </div>
+
+        <div class="swiper-button-prev swiper__button swiper__button_prev"></div>
+        <div class="swiper-button-next swiper__button swiper__button_next"></div>
       </div>
     </section>
   </main>
@@ -128,4 +272,5 @@
 
   <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>
+
 </html>

@@ -6,5 +6,7 @@
 @import '../../blocks/clients/clients.css';
 @import '../../blocks/tech/tech.css';
 @import '../../blocks/author/author.css';
+@import '../../blocks/github/github.css';
+@import '../../blocks/swiper/swiper.css';
 @import '../../blocks/footer/footer.css';
 @import '../../blocks/socials/socials.css';

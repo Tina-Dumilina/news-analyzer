@@ -7,8 +7,26 @@
 
 .intro {
   height: 576px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   color: #fff;
   background-image: url('../../images/intro-background.jpg');
   background-size: cover;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    height: 400px;
+    padding-top: 64px;
+    padding-bottom: 48px;
+  }
+}
+
+@media (max-width: 485px) {
+  .intro {
+    height: 536px;
+    padding-top: 56px;
+    padding-bottom: 32px;
+  }
 }

@@ -3,10 +3,13 @@
 @import './__item/header__item.css';
 @import './__link/header__link.css';
 @import './__link/_active/header__link_active.css';
+@import './__logo/header__logo.css';
 
 .header {
   width: 100%;
+  min-width: 320px;
   box-sizing: border-box;
+  min-height: 80px;
 }
 
 .header_theme_light {
@@ -19,4 +22,16 @@
   left: 0;
   background: rgba(196, 196, 196, 0.01);
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 64px;
+  }
+}
+
+@media (max-width: 485px) {
+  .header {
+    min-height: 56px;
+  }
 }

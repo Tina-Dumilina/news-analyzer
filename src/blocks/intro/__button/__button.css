@@ -18,3 +18,16 @@
 .intro__button:active {
   background-color: #2a65cc;
 }
+
+@media (max-width: 768px) {
+  .intro__button {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 485px) {
+  .intro__button {
+    position: static;
+    max-width: 100%;
+  }
+}

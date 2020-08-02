@@ -20,3 +20,9 @@
 .button:focus {
   transition: background-color .3s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  .button {
+    min-height: 56px;
+  }
+}

@@ -4,9 +4,15 @@
 @import './__heading/article__heading.css';
 @import './__lead/article__lead.css';
 @import './__source/article__source.css';
+@import './__container/article__container.css';
 
 .article {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 400px;
   background-color: #fff;
   border-radius: 16px;
   overflow: hidden;

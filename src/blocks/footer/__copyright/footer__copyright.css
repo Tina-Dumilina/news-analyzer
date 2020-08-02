@@ -3,3 +3,9 @@
   line-height: 1.37;
   color: #b6bcbf;
 }
+
+@media (max-width: 700px) {
+  .footer__copyright {
+    grid-area: copyright;
+  }
+}

@@ -31,3 +31,17 @@
 .intro__input::-webkit-search-results-decoration {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .intro__input {
+    min-height: 56px;
+  }
+}
+
+@media (max-width: 485px) {
+  .intro__input {
+    margin-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

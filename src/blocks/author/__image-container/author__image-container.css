@@ -4,3 +4,20 @@
   margin-right: 56px;
   border-radius: 50%;
 }
+
+@media (max-width: 768px) {
+  .author__image-container {
+    max-width: 232px;
+    max-height: 232px;
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 485px) {
+  .author__image-container {
+    max-width: 272px;
+    max-height: 272px;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}

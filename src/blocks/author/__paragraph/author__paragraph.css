@@ -7,3 +7,9 @@
 .author__paragraph:last-of-type {
   margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+  .author__paragraph {
+    margin-bottom: 0;
+  }
+}

@@ -1,3 +1,10 @@
 .footer__socials {
   justify-self: end;
 }
+
+@media (max-width: 700px) {
+  .footer__socials {
+    grid-area: socials;
+    align-self: self-start;
+  }
+}

@@ -2,3 +2,9 @@
   margin: 0;
   margin-bottom: 24px;
 }
+
+@media (max-width: 768px) {
+  .author__title {
+    margin-bottom: 16px;
+  }
+}

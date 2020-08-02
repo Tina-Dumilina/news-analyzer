@@ -5,3 +5,13 @@
 .header__item:last-of-type {
   margin-right: 0;
 }
+
+@media (max-width: 485px) {
+  .header__item {
+    margin-right: 11px;
+  }
+
+  .header__item:last-of-type {
+    margin-right: 0;
+  }
+}

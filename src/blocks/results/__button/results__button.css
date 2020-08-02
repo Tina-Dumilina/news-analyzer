@@ -12,3 +12,17 @@
 .results__button:focus {
   background-color: #e8e9ea;
 }
+
+@media (max-width: 768px) {
+  .results__button {
+    max-width: 246px;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 320px) {
+  .results__button {
+    max-width: 100%;
+    margin-top: 12px;
+  }
+}

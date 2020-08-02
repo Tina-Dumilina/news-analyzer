@@ -10,3 +10,24 @@
 .footer__item:hover {
   opacity: .8;
 }
+
+@media (max-width: 768px) {
+  .footer__item {
+    margin-right: 25px;
+  }
+
+  .footer__item:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer__item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer__item:last-of-type {
+    margin-bottom: 0;
+  }
+}

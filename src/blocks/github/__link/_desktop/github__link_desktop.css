@@ -1,0 +1,15 @@
+.github__link_desktop {
+  padding-right: 20px;
+  font-weight: 500;
+  line-height: 1.33;
+  text-decoration: none;
+  background-image: url('../../../../images/arrow-left.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+@media (max-width: 600px) {
+  .github__link_desktop {
+    display: none;
+  }
+}

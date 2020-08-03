@@ -58,7 +58,7 @@ module.exports = {
             options: {
               mozjpeg: {
                 progressive: true,
-                quality: 65
+                quality: 90
               },
               // optipng.enabled: false will disable optipng
               optipng: {
@@ -145,7 +145,8 @@ module.exports = {
       ],
       theme_color: '#fff',
       background_color: '#fff',
-      display: 'standalone'
+      display: 'standalone',
+      filename: 'favicon/[name].[contenthash].png'
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

@@ -17,4 +17,9 @@
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
+  transition: box-shadow .3s ease-in-out;
+}
+
+.article:hover {
+  box-shadow: 0 0 25px rgba(8, 29, 45, 0.1);
 }

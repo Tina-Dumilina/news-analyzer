@@ -2,6 +2,7 @@
 @import './__title-container/github__title-container.css';
 @import './__wrapper/github__wrapper.css';
 @import './__title/github__title.css';
+@import './__link-container/github__link-container.css';
 
 .github {
   padding-top: 72px;

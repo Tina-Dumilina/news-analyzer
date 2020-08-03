@@ -10,17 +10,3 @@
     max-width: 100%;
   }
 }
-
-@media (max-width: 768px) {
-  .swiper__wrapper {
-    padding-left: 40px;
-    padding-right: 48px;
-  }
-}
-
-@media (max-width: 485px) {
-  .swiper__wrapper {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}

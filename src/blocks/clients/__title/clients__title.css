@@ -1,4 +1,9 @@
 .clients__title {
   margin-bottom: 24px;
-  max-width: 815px;
+}
+
+@media (max-width: 768px) {
+  .clients__title {
+    margin-bottom: 16px;
+  }
 }

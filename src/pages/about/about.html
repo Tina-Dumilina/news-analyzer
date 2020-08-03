@@ -16,7 +16,7 @@
   <!-- Header -->
   <header class="header header_theme_light">
     <div class="container header__container">
-      <a href="/index.html" class="link">
+      <a href="/index.html" class="link header__logo-link">
         <img class="logo header__logo" src="<%= require('images/logo-black.svg') %>" alt="Логотип">
       </a>
       <nav class="header__nav">
@@ -64,7 +64,7 @@
     </section>
 
     <!-- Technologies -->
-    <section class="tech root__section">
+    <section class="tech">
       <div class="container tech__container">
         <h2 class="tech__title section-title">
           Используемые технологии
@@ -116,14 +116,34 @@
     <!-- Github -->
     <section class="github">
       <div class="github__title-container container">
-        <h2 class="github__title section-title">История коммитов из GitHub</h2>
+        <h2 class="github__title section-title">История коммитов из&nbsp;GitHub</h2>
         <a href="" class="github__link link">Открыть в Github</a>
       </div>
 
       <div class="github__wrapper">
-        <div class="github__swiper swiper">
-          <ul class="swiper__wrapper">
-            <li class="swiper__slide">
+        <div class="github__swiper swiper swiper-container">
+          <ul class="swiper__wrapper swiper-wrapper">
+            <li class="swiper__slide swiper-slide">
+              <a href="" class="swiper__link">
+                <article class="swiper__article">
+                  <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
+                  <div class="swiper__avatar">
+                    <div class="swiper__image-container">
+                      <img src="<%= require('images/slider-image.jpg') %>" alt="" class="swiper__image">
+                    </div>
+                    <div class="swiper__title-container">
+                      <h3 class="swiper__author">Мария Фёдорова</h3>
+                      <p class="swiper__email">mariiifed@yandex.ru</p>
+                    </div>
+                  </div>
+                  <p class="swiper__text">
+                    You can install this plugin directly from NetBeans Plugin Portal: in NetBeans.
+                  </p>
+                </article>
+              </a>
+            </li>
+
+            <li class="swiper__slide swiper-slide">
               <a href="" class="swiper__link">
                 <article class="swiper__article">
                   <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
@@ -145,7 +165,7 @@
               </a>
             </li>
 
-            <li class="swiper__slide">
+            <li class="swiper__slide swiper-slide">
               <a href="" class="swiper__link">
                 <article class="swiper__article">
                   <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
@@ -167,7 +187,7 @@
               </a>
             </li>
 
-            <li class="swiper__slide">
+            <li class="swiper__slide swiper-slide">
               <a href="" class="swiper__link">
                 <article class="swiper__article">
                   <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
@@ -189,7 +209,7 @@
               </a>
             </li>
 
-            <li class="swiper__slide">
+            <li class="swiper__slide swiper-slide">
               <a href="" class="swiper__link">
                 <article class="swiper__article">
                   <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
@@ -211,7 +231,7 @@
               </a>
             </li>
 
-            <li class="swiper__slide">
+            <li class="swiper__slide swiper-slide">
               <a href="" class="swiper__link">
                 <article class="swiper__article">
                   <time datetime="2019-08-14" class="swiper__time">14 августа, 2019</time>
@@ -225,9 +245,7 @@
                     </div>
                   </div>
                   <p class="swiper__text">
-                    You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open
-                    <code class="swiper__code">Tools > Plugins > Available plugins</code>
-                    and find and install Emmet plugin.
+                    You can install this plugin directly from NetBeans Plugin Portal: in NetBeans.
                   </p>
                 </article>
               </a>
@@ -235,7 +253,7 @@
 
           </ul>
           
-          <div class="swiper__pagination"></div>
+          <div class="swiper__pagination swiper-pagination"></div>
         </div>
 
         <div class="swiper-button-prev swiper__button swiper__button_prev"></div>

@@ -18,5 +18,34 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to left,rgba(245,246,247,0) 10%,#f5f6f7 30%);
+  background: linear-gradient(to left,rgba(245,246,247,0),#f5f6f7 20%);
+}
+
+@media (max-width: 1240px) {
+  .swiper__slide::after {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .swiper__slide {
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper__slide {
+    min-height: 262px;
+    max-width: 336px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .swiper__slide {
+    width: 100%;
+    max-width: 100%;
+    min-height: 264px;
+    padding: 16px;
+  }
 }

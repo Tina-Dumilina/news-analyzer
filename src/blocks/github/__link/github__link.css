@@ -7,3 +7,9 @@
   background-repeat: no-repeat;
   background-position: center right;
 }
+
+@media (max-width: 600px) {
+  .github__link {
+    display: none;
+  }
+}

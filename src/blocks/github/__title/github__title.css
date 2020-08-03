@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .github__title {
+    max-width: 336px;
+  }
+}

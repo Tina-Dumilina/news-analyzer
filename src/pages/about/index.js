@@ -8,7 +8,6 @@ const swiper = new Swiper('.swiper', {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 16,
-  centeredSlides: true,
 
   slideClass: 'swiper__slide',
   slideNextClass: 'swiper__slide_next',	
@@ -28,4 +27,22 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 8,
+      centeredSlides: false,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+      centeredSlides: false,
+    },
+    1240: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+      centeredSlides: true,
+    },
+  }
 });

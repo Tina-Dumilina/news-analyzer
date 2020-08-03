@@ -4,3 +4,9 @@
   align-items: center;
   margin-bottom: 16px;
 }
+
+@media (max-width: 768px) {
+  .github__title-container {
+    margin-bottom: 0;
+  }
+}

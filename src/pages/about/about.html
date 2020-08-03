@@ -97,7 +97,10 @@
     <!-- About author -->
     <section class="author container root__section">
       <div class="author__image-container">
-        <img class="author__image" src="<%= require('images/about-author.jpg') %>" alt="">
+        <picture>
+          <source srcset="<%= require('images/about-author_s.jpg') %>" media="(max-width: 768px)">
+          <img class="author__image" src="<%= require('images/about-author.jpg') %>" alt="">
+        </picture>
       </div>
       <div class="author__content">
         <h2 class="author__title section-title">Об авторе</h2>

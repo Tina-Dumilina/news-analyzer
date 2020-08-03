@@ -1,6 +1,5 @@
 @import '~normalize.css';
 @import '../../vendor/fonts.css';
-@import './__section/root__section.css';
 
 .root {
   min-width: 320px;

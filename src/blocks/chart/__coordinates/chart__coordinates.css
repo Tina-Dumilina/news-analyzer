@@ -13,3 +13,9 @@
 .chart__coordinates:last-of-type {
   margin-bottom: 0;
 }
+
+@media (max-width: 485px) {
+  .chart__coordinates {
+    display: none;
+  }
+}

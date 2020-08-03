@@ -3,3 +3,9 @@
   max-width: 104px;
   width: 100%;
 }
+
+@media (max-width: 485px) {
+  .chart__date {
+    max-width: 64px;
+  }
+}

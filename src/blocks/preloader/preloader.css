@@ -8,7 +8,7 @@
 	border-bottom-color: #888;
 	border-radius: 50%;
 	
-	/* animation: spin .75s infinite linear; */
+	animation: spin .75s infinite linear;
 }
 
 @keyframes spin {

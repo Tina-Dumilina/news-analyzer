@@ -38,15 +38,16 @@
           Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
         </p>
 
-        <div class="intro__search">
+        <form class="intro__search">
           <input 
             class="intro__input" 
             type="search" 
             name="search"
             placeholder="Введите тему новости"
+            required
           >
           <button class="intro__button button" type="button">Искать</button>
-        </div>
+        </form>
       </div>
     </section>
 
@@ -164,7 +165,7 @@
       <div class="author__image-container">
         <picture>
           <source srcset="<%= require('images/about-author_s.jpg') %>" media="(max-width: 768px)">
-          <img class="author__image" src="<%= require('images/about-author.jpg') %>" alt="">
+          <img class="author__image" src="<%= require('images/about-author.jpg') %>" alt="Автор сайта">
         </picture>
       </div>
       <div class="author__content">

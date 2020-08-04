@@ -6,8 +6,6 @@ Swiper.use([Navigation, Pagination]);
 
 const swiper = new Swiper('.swiper', {
   loop: true,
-  slidesPerView: 3,
-  spaceBetween: 16,
 
   slideClass: 'swiper__slide',
   slideNextClass: 'swiper__slide_next',	
@@ -39,7 +37,7 @@ const swiper = new Swiper('.swiper', {
       spaceBetween: 8,
       centeredSlides: false,
     },
-    1240: {
+    1024: {
       slidesPerView: 3,
       spaceBetween: 16,
       centeredSlides: true,

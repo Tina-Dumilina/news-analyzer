@@ -33,8 +33,14 @@ module.exports = {
       },
       {
         test: /\.css$/i,
+        sideEffects: true,
         use: [
-          (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+          (isDev ? 'style-loader' : {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          }),
           {
             loader: 'css-loader',
             options: {
@@ -49,8 +55,8 @@ module.exports = {
         use: [{
             loader: 'file-loader',
             options: {
-              name: 'images/[name].[ext]',
-              esModule: false
+              name: './images/[name].[ext]',
+              esModule: false,
             }
           },
           {
@@ -83,7 +89,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash].css',
+      filename: './css/[name].[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
@@ -120,33 +126,37 @@ module.exports = {
       icons: [{
           src: path.resolve(__dirname, 'src/images/favicon/android-chrome-192x192.png'),
           sizes: '192x192',
-          type: 'image/png'
+          type: 'image/png',
+          destination: path.join('favicons'),
         },
         {
           src: path.resolve(__dirname, 'src/images/favicon/android-chrome-512x512.png'),
           sizes: '512x512',
-          type: 'image/png'
+          type: 'image/png',
+          destination: path.join('favicons'),
         },
         {
           src: path.resolve(__dirname, 'src/images/favicon/apple-touch-icon.png'),
           sizes: '180x180',
-          type: 'image/png'
+          type: 'image/png',
+          destination: path.join('favicons'),
         },
         {
           src: path.resolve(__dirname, 'src/images/favicon/favicon-16x16.png'),
           sizes: '16x16',
-          type: 'image/png'
+          type: 'image/png',
+          destination: path.join('favicons'),
         },
         {
           src: path.resolve(__dirname, 'src/images/favicon/favicon-32x32.png'),
           sizes: '32x32',
-          type: 'image/png'
+          type: 'image/png',
+          destination: path.join('favicons'),
         }
       ],
       theme_color: '#fff',
       background_color: '#fff',
       display: 'standalone',
-      filename: 'favicon/[name].[contenthash].png'
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

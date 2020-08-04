@@ -5,12 +5,14 @@
   
   color: #1a1b22;
   background-color: #fff;
+  border: 1px solid transparent;
   border-radius: 80px;
 }
 
 .results__button:hover,
 .results__button:focus {
   background-color: #e8e9ea;
+  border: 1px solid #1a1b22;
 }
 
 @media (max-width: 768px) {

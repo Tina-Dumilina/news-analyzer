@@ -5,8 +5,14 @@
   margin-bottom: 16px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .github__title-container {
-    margin-bottom: 0;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 485px) {
+  .github__title-container {
+    margin-bottom: 16px;
   }
 }

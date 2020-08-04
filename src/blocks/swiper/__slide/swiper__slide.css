@@ -27,14 +27,11 @@
 }
 
 @media (max-width: 1240px) {
-  .swiper__slide::after {
-    display: none;
-  }
-}
-
-@media (max-width: 1024px) {
   .swiper__slide {
     margin-right: 8px;
+  }
+  .swiper__slide::after {
+    display: none;
   }
 }
 
@@ -46,7 +43,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 485px) {
   .swiper__slide {
     width: 100%;
     max-width: 100%;

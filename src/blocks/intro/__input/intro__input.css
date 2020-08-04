@@ -7,7 +7,7 @@
   border: 1px solid #D1D2D6;
   box-sizing: border-box;
   border-radius: 100px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -16,8 +16,12 @@
   caret-color: #2f71e5;
 }
 
+.intro__input:focus {
+  border: 1px solid #2f71e5;
+}
+
 .intro__input::placeholder {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

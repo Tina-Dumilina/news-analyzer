@@ -1,0 +1,36 @@
+{
+  "icons": [
+    {
+      "src": "favicons/icon_32x32.efedf4182a45e9402d2cb4bc9a9bb4f9.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/icon_16x16.1badcb5e8b3346c7d4f21608247990f3.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/icon_180x180.888e4533b99e7a13530b8d0aa08ce482.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/icon_512x512.f899800b29b493fb2bae119caec1d923.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/icon_192x192.db956b080e9e046fb52f475c204032da.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "NewsAnalyzer – сервис анализа новостей",
+  "short_name": "NewsAnalyzer",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "theme_color": "#fff",
+  "background_color": "#fff"
+}

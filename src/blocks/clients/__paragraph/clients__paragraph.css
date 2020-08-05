@@ -1,8 +1,0 @@
-.clients__paragraph {
-  margin: 0;
-  margin-bottom: 30px;
-}
-
-.clients__paragraph:last-of-type {
-  margin-bottom: 0;
-}

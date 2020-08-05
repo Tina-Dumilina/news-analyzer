@@ -1,9 +1,0 @@
-.breadcrumb__link {
-  color: inherit;
-  text-decoration: none;
-  transition: color .3s ease-in-out;
-}
-
-.breadcrumb__link:hover {
-  color: #b6bcbf;
-}

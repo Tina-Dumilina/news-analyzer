@@ -1,8 +1,0 @@
-.summary__item {
-  margin-bottom: 4px;
-  line-height: 1.33;
-}
-
-.summary__item:last-of-type {
-  margin-bottom: 0;
-}

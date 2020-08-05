@@ -1,9 +1,0 @@
-.article__content {
-  padding: 20px 24px 0;
-}
-
-@media (max-width: 1024px) {
-  .article__content {
-    padding: 16px 16px 0;
-  }
-}

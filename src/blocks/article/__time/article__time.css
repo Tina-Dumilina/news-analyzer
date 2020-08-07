@@ -1,0 +1,13 @@
+.article__time {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: normal;
+  line-height: 1.33;
+  color: #b6bcbf;
+}
+
+@media (max-width: 485px) {
+  .article__time {
+    margin-bottom: 16px;
+  }
+}

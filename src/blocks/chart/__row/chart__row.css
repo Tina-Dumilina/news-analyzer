@@ -1,0 +1,11 @@
+.chart__row {
+  display: flex;
+  min-height: 40px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #b6bcbf;
+  border-bottom: 1px solid #1A1B22;
+}

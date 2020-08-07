@@ -1,0 +1,35 @@
+.intro__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 168px;
+  color: #fff;
+  background-color: #2f71e5;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  border: 1px solid transparent;
+  border-radius: 100px; 
+  transition: background-color .3s ease-in-out;
+}
+
+.intro__button:hover,
+.intro__button:focus {
+  background-color: #347eff;
+  border: 1px solid #2a65cc;
+}
+
+.intro__button:active {
+  background-color: #2a65cc;
+}
+
+@media (max-width: 768px) {
+  .intro__button {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 485px) {
+  .intro__button {
+    position: static;
+    max-width: 100%;
+  }
+}

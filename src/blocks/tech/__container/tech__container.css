@@ -1,0 +1,10 @@
+.tech__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .tech__container {
+    flex-direction: column;
+  }
+}

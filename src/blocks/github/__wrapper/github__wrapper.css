@@ -1,0 +1,12 @@
+.github__wrapper {
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+  overflow: hidden;
+}
+
+@media (max-width: 1440px) {
+  .github__wrapper {
+    max-width: 100%;
+  }
+}

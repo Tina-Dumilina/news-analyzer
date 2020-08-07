@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Roboto';
+  src: local('Roboto Medium'),
+    url('./fonts/roboto-medium.woff2') format('woff2'),
+		url('./fonts/roboto-medium.woff') format('woff');
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+  src: local('Roboto Regular'),
+    url('./fonts/roboto-regular.woff2') format('woff2'),
+		url('./fonts/roboto-regular.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto Slab';
+  src: local('Roboto Slab Regular'),
+    url('./fonts/robotoslab-regular.woff2') format('woff2'),
+		url('./fonts/robotoslab-regular.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+  src: local('Source Sans Pro Regular'),
+    url('./fonts/sourcesanspro-regular.woff2') format('woff2'),
+		url('./fonts/sourcesanspro-regular.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}

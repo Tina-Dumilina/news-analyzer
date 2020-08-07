@@ -1,0 +1,30 @@
+.results__button {
+  display: block;
+  margin: 64px auto 0;
+  max-width: 288px;
+  
+  color: #1a1b22;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 80px;
+}
+
+.results__button:hover,
+.results__button:focus {
+  background-color: #e8e9ea;
+  border: 1px solid #1a1b22;
+}
+
+@media (max-width: 768px) {
+  .results__button {
+    max-width: 246px;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 320px) {
+  .results__button {
+    max-width: 100%;
+    margin-top: 12px;
+  }
+}

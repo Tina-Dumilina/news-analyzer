@@ -1,0 +1,10 @@
+.intro__search {
+  position: relative;
+}
+
+@media (max-width: 485px) {
+  .intro__search {
+    display: flex;
+    flex-direction: column;
+  }
+}

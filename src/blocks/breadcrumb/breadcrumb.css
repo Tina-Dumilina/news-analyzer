@@ -1,0 +1,22 @@
+@import './__item/breadcrumb__item.css';
+@import './__list/breadcrumb__list.css';
+@import './__link/breadcrumb__link.css';
+@import './__link/_active/breadcrumb__link_active.css';
+
+.breadcrumb {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 748px) {
+  .breadcrumb {
+    padding-top: 32px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 485px) {
+  .breadcrumb {
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+.swiper__image-container {
+  max-width: 64px;
+  max-height: 64px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .swiper__image-container {
+    max-width: 48px;
+    max-height: 48px;
+  }
+}
+
+@media (max-width: 485px) {
+  .swiper__image-container {
+    margin-right: 12px;
+  }
+}

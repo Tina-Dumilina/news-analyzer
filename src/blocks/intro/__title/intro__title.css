@@ -1,0 +1,23 @@
+.intro__title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 1.07;
+}
+
+@media (max-width: 768px) {
+  .intro__title {
+    margin-bottom: 16px;
+    max-width: 385px;
+    font-size: 36px;
+    line-height: 1.11;
+  }
+}
+
+@media (max-width: 485px) {
+  .intro__title {
+    max-width: 100%;
+  }
+}

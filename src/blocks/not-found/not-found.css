@@ -1,0 +1,9 @@
+@import './__heading/not-found__heading.css';
+@import './__image/not-found__image.css';
+@import './__paragraph/not-found__paragraph.css';
+
+.not-found {
+  margin: 0 auto;
+  max-width: 365px;
+  text-align: center;
+}

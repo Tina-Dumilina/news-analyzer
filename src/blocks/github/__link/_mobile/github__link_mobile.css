@@ -1,0 +1,24 @@
+.github__link_mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .github__link_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 80px;
+    background-color: transparent;
+    border: 1px solid #1a1b22;
+    transition: background-color .3s ease-in-out;
+  }
+
+  .github__link_mobile:hover,
+  .github__link_mobile:active,
+  .github__link_mobile:focus {
+    background-color: #fff;
+    border: 1px solid #2f71e5;
+  }
+}

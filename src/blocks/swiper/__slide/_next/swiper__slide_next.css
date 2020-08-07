@@ -1,0 +1,7 @@
+.swiper__slide_next + .swiper__slide::after {
+  background: linear-gradient(to right,rgba(245,246,247,0) 0%,#f5f6f7 20%);
+}
+
+.swiper__slide_next::after {
+  display: none;
+}

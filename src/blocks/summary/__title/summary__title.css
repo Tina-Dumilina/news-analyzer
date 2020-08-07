@@ -1,0 +1,9 @@
+.summary__title {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 485px) {
+  .summary__title {
+    margin-bottom: 16px;
+  }
+}

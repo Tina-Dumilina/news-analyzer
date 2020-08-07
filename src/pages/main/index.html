@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsAnalyzer. Что творится в мире?</title>
+  <meta name="author" content="Tina Dumilina">
+  <meta name="description" content="Это сервис для анализа происходящих в мире событий. Его задача – установить, насколько популярны новости на определенную тему.">
+  <link rel="shortcut icon" href="<%= require('images/favicon/favicon.ico') %>" type="image/x-icon">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
+</head>
+<body class="root">
+  <!-- Header -->
+  <header class="header header_theme_dark">
+    <div class="container header__container">
+      <img class="logo header__logo" src="<%= require('images/logo-white.svg') %>" alt="Логотип">
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="./index.html" class="header__link header__link_active">Главная</a>
+          </li>
+          <li class="header__item">
+            <a href="./about.html" class="header__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Intro section -->
+    <section class="intro">
+      <div class="intro__container">
+        <h1 class="intro__title">
+          Что в мире творится?
+        </h1>
+        <p class="intro__subtitle">
+          Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
+        </p>
+
+        <form class="intro__search">
+          <input 
+            class="intro__input" 
+            type="search" 
+            name="search"
+            placeholder="Введите тему новости"
+            required
+          >
+          <button class="intro__button button" type="button">Искать</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="results">
+      <div class="container results__container">
+        <div class="results__title-container">
+          <h2 class="results__title section-title">Результаты поиска</h2>
+          <a href="./analytics.html" class="results__analytics-link link">Посмотреть аналитику</a>
+        </div>
+        
+        <ul class="results__list">
+          <li class="results__item article">
+            <div class="article__container">
+              <img src="<%= require('images/article-image.jpg') %>" alt="" class="article__image">
+              <div class="article__content">
+                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
+                <h3 class="article__heading">
+                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+                </h3>
+                <p class="article__lead">
+                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. 
+                </p>
+              </div>
+            </div>
+
+            <span class="article__source">
+              Медиазона
+            </span>
+          </li>
+
+          <li class="results__item article">
+            <div class="article__container">
+              <img src="<%= require('images/article-image.jpg') %>" alt="" class="article__image">
+              <div class="article__content">
+                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
+                <h3 class="article__heading">
+                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+                </h3>
+                <p class="article__lead">
+                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. 
+                </p>
+              </div>
+            </div>
+
+            <span class="article__source">
+              Медиазона
+            </span>
+          </li>
+
+          <li class="results__item article">
+            <div class="article__container">
+              <img src="<%= require('images/article-image.jpg') %>" alt="" class="article__image">
+              <div class="article__content">
+                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
+                <h3 class="article__heading">
+                  «Первозданная тайга»
+                </h3>
+                <p class="article__lead">
+                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. 
+                </p>
+              </div>
+            </div>
+
+            <span class="article__source">
+              Медиазона
+            </span>
+          </li>
+
+          <li class="results__item article">
+            <div class="article__container">
+              <img src="<%= require('images/article-image.jpg') %>" alt="" class="article__image">
+              <div class="article__content">
+                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
+                <h3 class="article__heading">
+                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+                </h3>
+                <p class="article__lead">
+                  Знаменитый фотограф снимает первозданные леса России.
+                </p>
+              </div>
+            </div>
+
+            <span class="article__source">
+              Медиазона
+            </span>
+          </li>
+
+        </ul>
+
+        <!-- Кнопка "Показать еще" -->
+        <button type="button" class="button results__button">Показать еще</button>
+
+        <!-- Preloader -->
+        <div class="preloader results__preloader">
+          <i class="preloader__circle"></i>
+          <p class="preloader__text">Идет поиск новостей...</p>
+        </div>
+
+        <!-- Ничего не найдено -->
+        <div class="results__not-found not-found">
+          <span class="not-found__image"></span>
+          <h2 class="not-found__heading">
+            Ничего не найдено
+          </h2>
+          <p class="not-found__paragraph">
+            К сожалению по вашему запросу ничего не найдено.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About author -->
+    <section class="author container">
+      <div class="author__image-container">
+        <picture>
+          <source srcset="<%= require('images/about-author_s.jpg') %>" media="(max-width: 768px)">
+          <img class="author__image" src="<%= require('images/about-author.jpg') %>" alt="Автор сайта">
+        </picture>
+      </div>
+      <div class="author__content">
+        <h2 class="author__title section-title">Об авторе</h2>
+        <p class="author__paragraph">
+          Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+        </p>
+        <p class="author__paragraph">
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <span class="footer__copyright">&copy; Tina Dumilina</span>
+
+    <ul class="footer__nav">
+      <li class="footer__item">
+        <a href="./index.html" class="footer__link link">Главная</a>
+      </li>
+      <li class="footer__item">
+        <a href="./about.html" class="footer__link link">О проекте</a>
+      </li>
+      <li class="footer__item">
+        <a href="https://praktikum.yandex.ru/" target="_blank" class="footer__link link">Яндекс.Практикум</a>
+      </li>
+    </ul>
+
+    <ul class="footer__socials socials">
+      <li class="socials__item">
+        <a href="https://github.com/Tina-Dumilina" target="_blank" class="socials__link socials__link_github link"></a>
+      </li>
+      <li class="socials__item">
+        <a href="https://www.facebook.com/" target="_blank" class="socials__link socials__link_facebook link"></a>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+</body>
+</html>

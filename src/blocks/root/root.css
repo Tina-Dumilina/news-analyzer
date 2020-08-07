@@ -1,0 +1,16 @@
+@import '~normalize.css';
+@import '../../vendor/fonts.css';
+
+.root {
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  color: #1a1b22;
+  box-sizing: border-box;
+}

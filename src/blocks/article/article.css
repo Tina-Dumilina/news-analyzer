@@ -1,0 +1,25 @@
+@import './__image/article__image.css';
+@import './__content/article__content.css';
+@import './__time/article__time.css';
+@import './__heading/article__heading.css';
+@import './__lead/article__lead.css';
+@import './__source/article__source.css';
+@import './__container/article__container.css';
+
+.article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow .3s ease-in-out;
+}
+
+.article:hover {
+  box-shadow: 0 0 25px rgba(8, 29, 45, 0.1);
+}

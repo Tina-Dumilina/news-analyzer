@@ -1,0 +1,31 @@
+@import './__title/chart__title.css';
+@import './__row/chart__row.css';
+@import './__date/chart__date.css';
+@import './__month/chart__month.css';
+@import './__amount/chart__amount.css';
+@import './__list/chart__list.css';
+@import './__item/chart__item.css';
+@import './__day/chart__day.css';
+@import './__bar/chart__bar.css';
+@import './__number/chart__number.css';
+@import './__coordinates/chart__coordinates.css';
+
+.chart {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #f5f6f7;
+}
+
+@media (max-width: 768px) {
+  .chart {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+}

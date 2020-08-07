@@ -1,0 +1,10 @@
+.link {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity .3s ease-in-out;
+}
+
+.link:hover,
+.link:focus {
+  opacity: .8;
+}

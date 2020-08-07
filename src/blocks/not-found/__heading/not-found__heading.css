@@ -1,0 +1,9 @@
+.not-found__heading {
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 1.15;
+}

@@ -1,19 +1,7 @@
 .article__image {
-  display: block;
-  width: 100%;
-  max-height: 272px;
-  background-size: cover;
-  background-position: center;
-}
-
-@media (max-width: 768px) {
-  .article__image {
-    min-height: 150px;
-  }
-}
-
-@media (max-width: 320px) {
-  .article__image {
-    max-height: 196px;
-  }
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }

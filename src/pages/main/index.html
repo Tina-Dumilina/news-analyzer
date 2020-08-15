@@ -38,7 +38,7 @@
           Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
         </p>
 
-        <form class="intro__search">
+        <form class="intro__search" name="search">
           <input 
             class="intro__input" 
             type="search" 
@@ -46,7 +46,7 @@
             placeholder="Введите тему новости"
             required
           >
-          <button class="intro__button button" type="button">Искать</button>
+          <button class="intro__button button" type="submit">Искать</button>
         </form>
       </div>
     </section>
@@ -59,84 +59,7 @@
           <a href="./analytics.html" class="results__analytics-link link">Посмотреть аналитику</a>
         </div>
         
-        <ul class="results__list">
-          <li class="results__item article">
-            <div class="article__container">
-              <img src="<%= require('images/article-image.jpg') %>" alt="" class="article__image">
-              <div class="article__content">
-                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
-                <h3 class="article__heading">
-                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-                </h3>
-                <p class="article__lead">
-                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. 
-                </p>
-              </div>
-            </div>
-
-            <span class="article__source">
-              Медиазона
-            </span>
-          </li>
-
-          <li class="results__item article">
-            <div class="article__container">
-              <img src="<%= require('images/article-image.jpg') %>" alt="" class="article__image">
-              <div class="article__content">
-                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
-                <h3 class="article__heading">
-                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-                </h3>
-                <p class="article__lead">
-                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. 
-                </p>
-              </div>
-            </div>
-
-            <span class="article__source">
-              Медиазона
-            </span>
-          </li>
-
-          <li class="results__item article">
-            <div class="article__container">
-              <img src="<%= require('images/article-image.jpg') %>" alt="" class="article__image">
-              <div class="article__content">
-                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
-                <h3 class="article__heading">
-                  «Первозданная тайга»
-                </h3>
-                <p class="article__lead">
-                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. 
-                </p>
-              </div>
-            </div>
-
-            <span class="article__source">
-              Медиазона
-            </span>
-          </li>
-
-          <li class="results__item article">
-            <div class="article__container">
-              <img src="<%= require('images/article-image.jpg') %>" alt="" class="article__image">
-              <div class="article__content">
-                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
-                <h3 class="article__heading">
-                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-                </h3>
-                <p class="article__lead">
-                  Знаменитый фотограф снимает первозданные леса России.
-                </p>
-              </div>
-            </div>
-
-            <span class="article__source">
-              Медиазона
-            </span>
-          </li>
-
-        </ul>
+        <ul class="results__list"></ul>
 
         <!-- Кнопка "Показать еще" -->
         <button type="button" class="button results__button">Показать еще</button>
@@ -157,6 +80,7 @@
             К сожалению по вашему запросу ничего не найдено.
           </p>
         </div>
+
       </div>
     </section>
 
@@ -205,6 +129,25 @@
       </li>
     </ul>
   </footer>
+
+  <template id="news-card" style="display: none;">
+    <li class="results__item article">
+      <a class="article__link" href="" target="_blank">
+        <div class="article__container">
+          <div class="article__image-container">
+            <img src="" alt="" class="article__image">
+          </div>
+          <div class="article__content">
+            <time datetime="" class="article__time"></time>
+            <h3 class="article__heading"></h3>
+            <p class="article__lead"></p>
+          </div>
+        </div>
+
+        <span class="article__source"></span>
+      </a>
+    </li>
+  </template>
 
   <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 </body>

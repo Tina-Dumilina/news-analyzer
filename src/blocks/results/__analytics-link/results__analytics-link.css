@@ -6,4 +6,6 @@
   background-image: url('../../../images/arrow-left.svg');
   background-repeat: no-repeat;
   background-position: center right;
+
+  display: none;
 }

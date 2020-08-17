@@ -1,4 +1,3 @@
-const resultsSectionElement = document.querySelector('.results');
 const notFoundElement = document.querySelector('.not-found');
 const notFoundTitleElement = document.querySelector('.not-found__heading');
 const notFoundTextElement = document.querySelector('.not-found__paragraph');
@@ -9,7 +8,6 @@ export function renderLoadingState(newsCardList, dataStorage, resultsButtonEleme
   dataStorage.clear();
   resultsButtonElement.style.display = 'none';
   notFoundElement.style.display = 'none';
-  resultsSectionElement.style.display = 'block';
   preloaderElement.style.display = 'block';
 }
 
@@ -33,4 +31,8 @@ export function getCorrectDateFormat(date) {
   const formattedDate = new Date(date).toLocaleDateString('ru', {month: 'long', day: 'numeric'})
   const year = new Date(date).getFullYear();
   return `${formattedDate}, ${year}`;
+}
+
+export function getMonthFormatted(date) {
+  return new Date(date).toLocaleDateString('ru', {month: 'long'});
 }

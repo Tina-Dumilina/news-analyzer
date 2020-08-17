@@ -4,8 +4,8 @@ export class NewsApi {
     this._url = options.baseUrl;
   }
 
-  getNews(query, fromDay, today) {
-    return fetch(`${this._url}?q=${query}&from=${fromDay}&to=${today}&sort=publishedAt&pageSize=100&apiKey=${this._apiKey}`)
+  getNews({from, to, query, limit}) {
+    return fetch(`${this._url}?q=${query}&from=${from}&to=${to}&sortBy=publishedAt&pageSize=${limit}&apiKey=${this._apiKey}`)
       .then(res => {
         if (res.ok) {
           return res.json();

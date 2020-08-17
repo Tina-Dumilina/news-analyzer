@@ -5,6 +5,8 @@ import { NewsCard } from '../../js/components/NewsCard';
 import { NewsCardList } from '../../js/components/NewsCardList';
 import * as CONSTANTS from '../../js/constants';
 import { renderLoadingState, showErrorMessage, renderNotFoundState, hidePreloaderElement, getCorrectDateFormat } from '../../js/utils';
+import { SearchInput } from '../../js/components/SearchInput';
+import { BaseComponent } from '../../js/components/BaseComponent';
 
 // Class instances
 const newsApi = new NewsApi ({
@@ -19,18 +21,23 @@ const searchFormElement = document.querySelector('.intro__search');
 const newsCardTemplate = document.querySelector('#news-card').content;
 const analyticsLinkElement = document.querySelector('.results__analytics-link');
 const resultsButtonElement = document.querySelector('.results__button');
+const resultsSectionElement = document.querySelector('.results');
 
 let counter = 0;
 
 // Functions
+const getNewsApiDateFormat = date => date.toISOString().split('T')[0];
+
 const showNewsCards = () => {
-  const articles = dataStorage.getResults().articles;
+  const articles = dataStorage.getResults(localStorage.currentKey).articles;
   articles.splice(counter, CONSTANTS.CARDS_TO_RENDER).forEach(article => {
     newsCardList.addCard(new NewsCard(article, newsCardTemplate, getCorrectDateFormat).create());
   });
 
   if (counter >= articles.length) {
     resultsButtonElement.style.display = 'none';
+  } else {
+    resultsButtonElement.style.display = 'block';
   }
   counter += CONSTANTS.CARDS_TO_RENDER;
 };
@@ -38,22 +45,25 @@ const showNewsCards = () => {
 const searchNews = (e) => {
   e.preventDefault();
   counter = 0;
+  resultsSectionElement.style.display = 'block';
   renderLoadingState(newsCardList, dataStorage, resultsButtonElement);
 
-  const today = new Date();
-  const fromDay = new Date(today.getTime() - 7);
   const value = searchFormElement.querySelector('.intro__input').value;
+  const config = {
+    from: getNewsApiDateFormat(CONSTANTS.WEEK_AGO),
+    to: getNewsApiDateFormat(new Date()),
+    query: value,
+    limit: CONSTANTS.PAGE_SIZE_LIMIT,
+  };
 
-  newsApi.getNews(value, fromDay, today)
+  newsApi.getNews(config)
     .then(data => {
       if (data.totalResults > 0) {
+        localStorage.currentKey = value;
+        localStorage.news = JSON.stringify(data);
         dataStorage.saveResults(value, data);
-        showNewsCards();
         analyticsLinkElement.style.display = 'inline-block';
-
-        if (data.totalResults > CONSTANTS.CARDS_TO_RENDER) {
-          resultsButtonElement.style.display = 'block';
-        }
+        showNewsCards();
       } else {
         renderNotFoundState();
       }
@@ -62,6 +72,27 @@ const searchNews = (e) => {
     .finally(() => hidePreloaderElement());
 };
 
-// Event listeners
-searchFormElement.addEventListener('submit', searchNews);
-resultsButtonElement.addEventListener('click', showNewsCards);
+const getInitialState = () => {
+  if (localStorage.currentKey && localStorage.news) {
+    resultsSectionElement.style.display = 'block';
+    analyticsLinkElement.style.display = 'inline-block';
+    document.querySelector('.intro__input').defaultValue = localStorage.currentKey;
+    showNewsCards();
+  }
+};
+
+const resultsButton = new BaseComponent([{
+  element: resultsButtonElement,
+  event: 'click',
+  callback: showNewsCards,
+}]);
+resultsButton.setHandlers();
+
+const searchInput = new SearchInput([{
+  element: searchFormElement,
+  event: 'submit',
+  callback: searchNews,
+}]);
+searchInput.setHandlers();
+
+window.onload = getInitialState();

@@ -8,9 +8,11 @@ import { renderLoadingState, showErrorMessage, renderNotFoundState, hidePreloade
 import { SearchInput } from '../../js/components/SearchInput';
 import { BaseComponent } from '../../js/components/BaseComponent';
 
+const serverUrl = NODE_ENV === 'development' ? 'https://newsapi.org/v2/everything' : CONSTANTS.NEWS_API_URL;
+
 // Class instances
 const newsApi = new NewsApi ({
-  baseUrl: CONSTANTS.NEWS_API_URL,
+  baseUrl: serverUrl,
   apiKey: CONSTANTS.NEWS_API_KEY,
 });
 const dataStorage = new DataStorage();
@@ -46,7 +48,7 @@ const searchNews = (e) => {
   e.preventDefault();
   counter = 0;
   resultsSectionElement.style.display = 'block';
-  renderLoadingState(newsCardList, dataStorage, resultsButtonElement);
+  renderLoadingState(newsCardList, resultsButtonElement);
 
   const value = searchFormElement.querySelector('.intro__input').value;
   const config = {
@@ -58,9 +60,9 @@ const searchNews = (e) => {
 
   newsApi.getNews(config)
     .then(data => {
+      dataStorage.clear();
       if (data.totalResults > 0) {
         localStorage.currentKey = value;
-        localStorage.news = JSON.stringify(data);
         dataStorage.saveResults(value, data);
         analyticsLinkElement.style.display = 'inline-block';
         showNewsCards();
@@ -73,12 +75,16 @@ const searchNews = (e) => {
 };
 
 const getInitialState = () => {
-  if (localStorage.currentKey && localStorage.news) {
+  if (localStorage.currentKey) {
     resultsSectionElement.style.display = 'block';
     analyticsLinkElement.style.display = 'inline-block';
     document.querySelector('.intro__input').defaultValue = localStorage.currentKey;
     showNewsCards();
   }
+};
+
+const checkInputValidity = () => {
+
 };
 
 const resultsButton = new BaseComponent([{
@@ -88,11 +94,18 @@ const resultsButton = new BaseComponent([{
 }]);
 resultsButton.setHandlers();
 
-const searchInput = new SearchInput([{
-  element: searchFormElement,
-  event: 'submit',
-  callback: searchNews,
-}]);
+const searchInput = new SearchInput([
+  {
+    element: searchFormElement,
+    event: 'submit',
+    callback: searchNews,
+  },
+  {
+    element: searchFormElement,
+    event: 'input',
+    callback: checkInputValidity,
+  }
+]);
 searchInput.setHandlers();
 
 window.onload = getInitialState();

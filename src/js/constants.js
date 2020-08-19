@@ -6,3 +6,4 @@ export const DAY = 24 * 60 * 60 * 1000;
 export const WEEK = 7 * DAY;
 export const WEEK_AGO = new Date(Date.now() - WEEK);
 export const PAGE_SIZE_LIMIT = 100;
+export const COMMITS_NUMBER_LIMIT = 20;

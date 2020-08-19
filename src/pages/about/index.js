@@ -8,7 +8,7 @@ import { GithubApi } from '../../js/modules/GithubApi';
 import { CommitCard } from '../../js/components/CommitCard';
 import { CommitCardList } from '../../js/components/CommitCardList';
 import * as CONSTANTS from '../../js/constants';
-import { getCorrectDateFormat } from '../../js/utils';
+import { getCorrectDateFormat, showErrorMessage } from '../../js/utils';
 
 // Swiper
 const swiper = new Swiper('.swiper', {
@@ -56,7 +56,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 // Class instances
-const githubApi = new GithubApi(CONSTANTS.GITHUB_API_URL);
+const githubApi = new GithubApi(CONSTANTS.GITHUB_API_URL, CONSTANTS.COMMITS_NUMBER_LIMIT);
 const commitCardList = new CommitCardList(document.querySelector('.swiper__wrapper'));
 
 // Elements
@@ -64,8 +64,12 @@ const commitCardTemplate = document.querySelector('#commit-card').content;
 
 githubApi.getCommits()
   .then(data => {
-    data.slice(-20).forEach(commit => {
+    data.forEach(commit => {
       commitCardList.addCard(new CommitCard(commit, commitCardTemplate, getCorrectDateFormat).create());
     })
+  })
+  .catch(() => {
+    document.querySelector('.github__wrapper').style.display = 'none';
+    showErrorMessage();
   })
 

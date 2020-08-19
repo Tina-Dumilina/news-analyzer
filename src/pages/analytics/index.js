@@ -1,6 +1,7 @@
 import './style.css';
 import { Statistics } from '../../js/components/Statistics';
 import { DAY } from '../../js/constants';
+import { renderNotFoundState } from '../../js/utils';
 
 const getChartWeekdayFormat = (date) => {
   const dateInstance = new Date(date);
@@ -39,5 +40,5 @@ if (localStorage.currentKey) {
   statistics.renderChartDays(getWeekdaysArray);
   statistics.renderChartDiagram();
 } else {
-  document.querySelector('.not-found').style.display = 'block';
+  renderNotFoundState();
 }

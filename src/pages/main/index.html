@@ -38,7 +38,8 @@
           Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
         </p>
 
-        <form class="intro__search" name="search">
+        <form class="intro__search" name="search" novalidate>
+          <span class="intro__error"></span>
           <input 
             class="intro__input" 
             type="search" 
@@ -47,6 +48,7 @@
             required
           >
           <button class="intro__button button" type="submit">Искать</button>
+          
         </form>
       </div>
     </section>

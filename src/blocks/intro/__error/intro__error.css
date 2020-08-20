@@ -1,0 +1,13 @@
+.intro__error {
+  position: absolute;
+  top: 105%;
+  left: 5%;
+  font-size: 16px;
+  color: #f00;
+}
+
+@media (max-width: 485px) {
+  .intro__error {
+    top: -18%;
+  }
+}

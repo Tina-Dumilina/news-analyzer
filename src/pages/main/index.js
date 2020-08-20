@@ -46,32 +46,36 @@ const showNewsCards = () => {
 
 const searchNews = (e) => {
   e.preventDefault();
-  counter = 0;
-  resultsSectionElement.style.display = 'block';
-  renderLoadingState(newsCardList, resultsButtonElement);
+  const isValid = searchInput.isFormValid(searchFormElement);
 
-  const value = searchFormElement.querySelector('.intro__input').value;
-  const config = {
-    from: getNewsApiDateFormat(CONSTANTS.WEEK_AGO),
-    to: getNewsApiDateFormat(new Date()),
-    query: value,
-    limit: CONSTANTS.PAGE_SIZE_LIMIT,
-  };
+  if (isValid) {
+    counter = 0;
+    resultsSectionElement.style.display = 'block';
+    renderLoadingState(newsCardList, resultsButtonElement);
 
-  newsApi.getNews(config)
-    .then(data => {
-      dataStorage.clear();
-      if (data.totalResults > 0) {
-        localStorage.currentKey = value;
-        dataStorage.saveResults(value, data);
-        analyticsLinkElement.style.display = 'inline-block';
-        showNewsCards();
-      } else {
-        renderNotFoundState();
-      }
-    })
-    .catch(() => showErrorMessage())
-    .finally(() => hidePreloaderElement());
+    const value = searchFormElement.querySelector('.intro__input').value;
+    const config = {
+      from: getNewsApiDateFormat(CONSTANTS.WEEK_AGO),
+      to: getNewsApiDateFormat(new Date()),
+      query: value,
+      limit: CONSTANTS.PAGE_SIZE_LIMIT,
+    };
+
+    newsApi.getNews(config)
+      .then(data => {
+        dataStorage.clear();
+        if (data.totalResults > 0) {
+          localStorage.currentKey = value;
+          dataStorage.saveResults(value, data);
+          analyticsLinkElement.style.display = 'inline-block';
+          showNewsCards();
+        } else {
+          renderNotFoundState();
+        }
+      })
+      .catch(() => showErrorMessage())
+      .finally(() => hidePreloaderElement());
+  } 
 };
 
 const getInitialState = () => {
@@ -81,10 +85,6 @@ const getInitialState = () => {
     document.querySelector('.intro__input').defaultValue = localStorage.currentKey;
     showNewsCards();
   }
-};
-
-const checkInputValidity = () => {
-
 };
 
 const resultsButton = new BaseComponent([{
@@ -99,13 +99,9 @@ const searchInput = new SearchInput([
     element: searchFormElement,
     event: 'submit',
     callback: searchNews,
-  },
-  {
-    element: searchFormElement,
-    event: 'input',
-    callback: checkInputValidity,
   }
 ]);
 searchInput.setHandlers();
+searchFormElement.addEventListener('input', (e) => searchInput.setEventListeners(e));
 
 window.onload = getInitialState();

@@ -7,7 +7,7 @@
   <meta name="author" content="Tina Dumilina">
   <meta name="description" content="Это сервис для анализа происходящих в мире событий. Его задача – установить, насколько популярны новости на определенную тему.">
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./css/index.2201395e67f72daf6949.css?370c38dacc3aa95ef4cc">
+  <link rel="stylesheet" href="./css/index.05f65f6a31a83fb92d29.css?efefde14ee6858f581b8">
 <meta name="theme-color" content="#fff" /><link rel="manifest" href="manifest.0675d194e7017fd976b624138d396180.json" /></head>
 <body class="root">
   <!-- Header -->
@@ -38,7 +38,8 @@
           Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
         </p>
 
-        <form class="intro__search">
+        <form class="intro__search" name="search" novalidate>
+          <span class="intro__error"></span>
           <input 
             class="intro__input" 
             type="search" 
@@ -46,7 +47,8 @@
             placeholder="Введите тему новости"
             required
           >
-          <button class="intro__button button" type="button">Искать</button>
+          <button class="intro__button button" type="submit">Искать</button>
+          
         </form>
       </div>
     </section>
@@ -59,84 +61,7 @@
           <a href="./analytics.html" class="results__analytics-link link">Посмотреть аналитику</a>
         </div>
         
-        <ul class="results__list">
-          <li class="results__item article">
-            <div class="article__container">
-              <img src="./images/article-image.jpg" alt="" class="article__image">
-              <div class="article__content">
-                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
-                <h3 class="article__heading">
-                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-                </h3>
-                <p class="article__lead">
-                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. 
-                </p>
-              </div>
-            </div>
-
-            <span class="article__source">
-              Медиазона
-            </span>
-          </li>
-
-          <li class="results__item article">
-            <div class="article__container">
-              <img src="./images/article-image.jpg" alt="" class="article__image">
-              <div class="article__content">
-                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
-                <h3 class="article__heading">
-                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-                </h3>
-                <p class="article__lead">
-                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. 
-                </p>
-              </div>
-            </div>
-
-            <span class="article__source">
-              Медиазона
-            </span>
-          </li>
-
-          <li class="results__item article">
-            <div class="article__container">
-              <img src="./images/article-image.jpg" alt="" class="article__image">
-              <div class="article__content">
-                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
-                <h3 class="article__heading">
-                  «Первозданная тайга»
-                </h3>
-                <p class="article__lead">
-                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. 
-                </p>
-              </div>
-            </div>
-
-            <span class="article__source">
-              Медиазона
-            </span>
-          </li>
-
-          <li class="results__item article">
-            <div class="article__container">
-              <img src="./images/article-image.jpg" alt="" class="article__image">
-              <div class="article__content">
-                <time datetime="2019-08-02" class="article__time">2 августа, 2019</time>
-                <h3 class="article__heading">
-                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-                </h3>
-                <p class="article__lead">
-                  Знаменитый фотограф снимает первозданные леса России.
-                </p>
-              </div>
-            </div>
-
-            <span class="article__source">
-              Медиазона
-            </span>
-          </li>
-
-        </ul>
+        <ul class="results__list"></ul>
 
         <!-- Кнопка "Показать еще" -->
         <button type="button" class="button results__button">Показать еще</button>
@@ -157,6 +82,7 @@
             К сожалению по вашему запросу ничего не найдено.
           </p>
         </div>
+
       </div>
     </section>
 
@@ -206,6 +132,25 @@
     </ul>
   </footer>
 
-  <script src="js/index.31aa8026d22272c4a9f8.js?370c38dacc3aa95ef4cc"></script>
+  <template id="news-card" style="display: none;">
+    <li class="results__item article">
+      <a class="article__link" href="" target="_blank">
+        <div class="article__container">
+          <div class="article__image-container">
+            <img src="" alt="" class="article__image">
+          </div>
+          <div class="article__content">
+            <time datetime="" class="article__time"></time>
+            <h3 class="article__heading"></h3>
+            <p class="article__lead"></p>
+          </div>
+        </div>
+
+        <span class="article__source"></span>
+      </a>
+    </li>
+  </template>
+
+  <script src="js/index.db08a1d583e96317d462.js?efefde14ee6858f581b8"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
   <meta name="author" content="Tina Dumilina">
   <meta name="description" content="Это сервис для анализа происходящих в мире событий. Его задача – установить, насколько популярны новости на определенную тему.">
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./css/analytics.884635dca87b37755548.css?370c38dacc3aa95ef4cc">
+  <link rel="stylesheet" href="./css/analytics.2de6db56ae4f2465063c.css?efefde14ee6858f581b8">
 <meta name="theme-color" content="#fff" /><link rel="manifest" href="manifest.0675d194e7017fd976b624138d396180.json" /></head>
 <body class="root">
   <!-- Header -->
@@ -29,7 +29,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="statistics">
     <!-- Breadcrumb -->
     <nav class="breadcrumb container" aria-label="Breadcrumb">
       <ol class="breadcrumb__list">
@@ -43,19 +43,16 @@
     </nav>
 
     <section class="summary container">
-      <h1 class="summary__title section-title">
-        Вы спросили: «Путешествия»
-      </h1>
-      <ul class="summary__results">
-        <li class="summary__item">
-          Новостей за неделю: 
-          <span class="summary__text-accent">34 324</span>
-        </li>
-        <li class="summary__item">
-          Упоминаний в заголовках: 
-          <span class="summary__text-accent">235</span>
-        </li>
-      </ul>
+      <!-- Ничего не найдено -->
+      <div class="results__not-found not-found">
+        <span class="not-found__image"></span>
+        <h2 class="not-found__heading">
+          Ничего не найдено
+        </h2>
+        <p class="not-found__paragraph">
+          Вы пока не ввели ни один запрос.
+        </p>
+      </div>
     </section>
 
     <!-- Диаграмма -->
@@ -66,9 +63,7 @@
         <div class="chart__row">
           <p class="chart__date">
             Дата
-            <span class="chart__month">
-              (август)
-            </span>
+            <span class="chart__month"></span>
           </p>
           <p class="chart__amount">
             Кол-во упоминаний
@@ -86,43 +81,43 @@
         <ul class="chart__list">
           <li class="chart__item">
             <span class="chart__day">19, пн</span>
-            <div class="chart__bar" style="width: 20%;">
+            <div class="chart__bar">
               <span class="chart__number">20</span>
             </div>
           </li>
           <li class="chart__item">
             <span class="chart__day">19, пн</span>
-            <div class="chart__bar" style="width: 40%;">
+            <div class="chart__bar">
               <span class="chart__number">40</span>
             </div>
           </li>
           <li class="chart__item">
             <span class="chart__day">19, пн</span>
-            <div class="chart__bar" style="width: 60%;">
+            <div class="chart__bar">
               <span class="chart__number">60</span>
             </div>
           </li>
           <li class="chart__item">
             <span class="chart__day">19, пн</span>
-            <div class="chart__bar" style="width: 80%;">
+            <div class="chart__bar">
               <span class="chart__number">80</span>
             </div>
           </li>
           <li class="chart__item">
             <span class="chart__day">19, пн</span>
-            <div class="chart__bar" style="width: 100%;">
+            <div class="chart__bar">
               <span class="chart__number">100</span>
             </div>
           </li>
           <li class="chart__item">
             <span class="chart__day">19, пн</span>
-            <div class="chart__bar" style="width: 2%;">
+            <div class="chart__bar">
               <span class="chart__number">2</span>
             </div>
           </li>
           <li class="chart__item">
             <span class="chart__day">19, пн</span>
-            <div class="chart__bar chart__bar_zero">
+            <div class="chart__bar">
               <span class="chart__number">0</span>
             </div>
           </li>
@@ -165,6 +160,6 @@
     </ul>
   </footer>
 
-  <script src="js/analytics.42e3dd20bdbd8eae4afa.js?370c38dacc3aa95ef4cc"></script>
+  <script src="js/analytics.8616dbc277349e923e47.js?efefde14ee6858f581b8"></script>
 </body>
 </html>

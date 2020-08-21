@@ -1,0 +1,7 @@
+.article__image-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 55%;
+  background-color: #000;
+  color: #fff;
+}

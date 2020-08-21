@@ -1,3 +1,7 @@
+.preloader {
+	display: none;
+}
+
 .preloader__circle {
 	display: block;
 	width: 74px;

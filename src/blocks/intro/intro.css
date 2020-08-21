@@ -4,6 +4,7 @@
 @import './__search/intro__search.css';
 @import './__input/intro__input.css';
 @import './__button/__button.css';
+@import './__error/intro__error.css';
 
 .intro {
   height: 576px;

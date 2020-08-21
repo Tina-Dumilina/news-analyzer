@@ -43,7 +43,7 @@
   }
 }
 
-@media (max-width: 485px) {
+@media (max-width: 600px) {
   .swiper__slide {
     width: 100%;
     max-width: 100%;

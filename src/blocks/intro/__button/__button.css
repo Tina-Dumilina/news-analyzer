@@ -21,6 +21,10 @@
   background-color: #2a65cc;
 }
 
+.intro__button:disabled {
+  background-color: #b6bcbf;
+}
+
 @media (max-width: 768px) {
   .intro__button {
     max-width: 160px;

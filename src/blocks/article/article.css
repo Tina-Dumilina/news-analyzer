@@ -5,6 +5,8 @@
 @import './__lead/article__lead.css';
 @import './__source/article__source.css';
 @import './__container/article__container.css';
+@import './__image-container/article__image-container.css';
+@import './__link/article__link.css';
 
 .article {
   position: relative;

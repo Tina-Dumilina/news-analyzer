@@ -51,6 +51,6 @@
     "babel-polyfill": "6.26.0",
     "core-js": "3.4.1",
     "normalize.css": "8.0.1",
-    "swiper": "6.0.4"
+    "swiper": "6.5.1"
   }
 }
